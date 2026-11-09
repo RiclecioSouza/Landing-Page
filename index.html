@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page de uma marca de café, chá e sobremesas.">
+    <title>Confis — Pequenos momentos, grandes sorrisos</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="#inicio" class="logo">CONFS<span>.</span></a>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#historia">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PRIMEIRA PARTE: HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-imagem">
+                <!-- Substitua este bloco pela primeira imagem do projeto -->
+                <div class="imagem-placeholder">
+                    <!--Imagem principal-->
+                    <img src="imagens/imagem-1.png" alt="Café e Sobremesa">
+                </div>
+            </div>
+
+            <div class="hero-text">
+                <p class="etiqueta">SORVETE · CHÁ · CAFÉ</p>
+
+                <h1>Pequenos momentos,<br><span>grandes sorrisos.</span></h1>
+
+                <p class="hero-descricao">
+                    Cada sabor é preparado para transformar uma pausa
+                    simples em um momento especial.
+                </p>
+
+                <a href="#experiencia" class="botao">Conheça a experiência</a>
+            </div>
+        </section>
+
+        <!-- SEGUNDA PARTE: IDENTIDADE / EXPERIÊNCIA -->
+        <section class="experiencia" id="experiencia">
+            <div class="secao-cabecalho">
+                <p class="etiqueta">NOSSA IDENTIDADE</p>
+                <h2>Uma experiência pensada<br>em cada detalhe.</h2>
+                <p>
+                    Da embalagem ao primeiro gole, tudo foi criado para
+                    transmitir uma sensação leve, acolhedora e memorável.
+                </p>
+            </div>
+
+            <div class="grade-experiencia">
+                <article class="cartao cartao-grande">
+                    <!-- Substitua pelo recorte de Packaging Design -->
+                    <div class="imagem-placeholder">
+                        <!--Packaging Design-->
+                        <img src="imagens/imagem-2.jpg" alt="">
+                    </div>
+
+                    <div class="cartao-conteudo">
+                        <span>01</span>
+                        <h3>Packaging Design</h3>
+                        <p>Uma identidade visual simples, calorosa e reconhecível.</p>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <div class="imagem-placeholder">
+                        <div class="menu-preview">
+
+                            <div class="menu-cabecalho">
+                                <span>CONFS</span>
+                                <h3>MENU</h3>
+                                <p>Sorvete · Chá · Café</p>
+                            </div>
+
+                            <div class="menu-itens">
+                                <div class="menu-item">
+                                    <div>
+                                        <h4>Café Tradicional</h4>
+                                        <p>Café preparado na hora</p>
+                                    </div>
+                                    <strong>R$ 6,90</strong>
+                                </div>
+
+                                <div class="menu-item">
+                                    <div>
+                                        <h4>Waffle Especial</h4>
+                                        <p>Frutas, chocolate e sorvete</p>
+                                    </div>
+                                    <strong>R$ 18,90</strong>
+                                </div>
+
+                                <div class="menu-item">
+                                    <div>
+                                        <h4>Milkshake</h4>
+                                        <p>Cremoso e gelado</p>
+                                    </div>
+                                    <strong>R$ 16,90</strong>
+                                </div>
+
+                                <div class="menu-item">
+                                    <div>
+                                        <h4>Açaí na Tigela</h4>
+                                        <p>Banana, granola e chocolate</p>
+                                    </div>
+                                    <strong>R$ 14,90</strong>
+                                </div>
+                            </div>
+
+                            <button class="menu-botao" id="abrir-menu">
+                                Ver cardápio completo
+                                <span>→</span>
+                            </button>
+
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao cartao-texto">
+                    <span>03</span>
+                    <h3>História &<br>Experiência</h3>
+                    <p>
+                        Uma marca que combina sabor, simplicidade e
+                        personalidade em uma única experiência.
+                    </p>
+
+                    <button class="historia-botao" id="abrir-historia">
+                        Ver história e experiência
+                        <span>→</span>
+                    </button>
+                </article>
+            </div>
+
+            <!--MODAL do Menu-->
+            <div class="modal" id="modal-menu" aria-hidden="true">
+                <div class="modal-conteudo">
+                    <button class="modal-fechar" id="fechar-menu" aria-label="Fechar cardápio">
+                        x
+                    </button>
+
+                    <div class="modal-cabecalho">
+                        <span>CONFS</span>
+                        <h2>Nosso Menu</h2>
+                        <p>Sorvete · Chá · Café</p>
+                    </div>
+
+                    <div class="cardapio">
+                        <section class="categoria">
+                            <h3>Cafés</h3>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-1.copy.jpg" alt="">
+                                    <h4>Café Tradicional</h4>
+                                    <p>Café preparado na hora</p>
+                                </div>
+                                <strong>R$ 6,90</strong>
+                            </div>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-2.jpg" alt="">
+                                    <h4>Cappuccino</h4>
+                                    <p>Café, leite cremoso e canela</p>
+                                </div>
+                                <strong>R$ 9,90</strong>
+                            </div>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-3.jpg" alt="">
+                                    <h4>Café Gelado</h4>
+                                    <p>Café, gelo e leite</p>
+                                </div>
+                                <strong>R$ 11,90</strong>
+                            </div>
+                        </section>
+
+                        <section class="categoria">
+                            <h3>Sobremesas</h3>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-4.jpg" alt="">
+                                    <h4>Waffle Especial</h4>
+                                    <p>Frutas, chocolate e sorvete</p>
+                                </div>
+                                <strong>R$ 18,90</strong>
+                            </div>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-5.jpg" alt="">
+                                    <h4>Brownie</h4>
+                                    <p>Brownie com calda de chocolate</p>
+                                </div>
+                                <strong>R$ 12,90</strong>
+                            </div>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-6.jpg" alt="">
+                                    <h4>Sorvete Especial</h4>
+                                    <p>Duas bolas com cobertura</p>
+                                </div>
+                                <strong>R$ 15,90</strong>
+                            </div>
+                        </section>
+
+                        <section class="categoria">
+                            <h3>Bebidas</h3>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-7.jpg" alt="">
+                                    <h4>Milkshake</h4>
+                                    <p>Chocolate, morango ou baunilha</p>
+                                </div>
+                                <strong>R$ 16,90</strong>
+                            </div>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-8.jpg" alt="">
+                                    <h4>Chá Gelado</h4>
+                                    <p>Chá natural com frutas</p>
+                                </div>
+                                <strong>R$ 9,90</strong>
+                            </div>
+                        </section>
+
+                        <section class="categoria">
+                            <h3>Açaí</h3>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-9.jpg" alt="">
+                                    <h4>Açaí na Tigela</h4>
+                                    <p>Banana, granola e chocolate</p>
+                                </div>
+                                <strong>R$ 14,90</strong>
+                            </div>
+
+                            <div class="produto">
+                                <div>
+                                    <img src="imagens/imagem-menu-10.jpg" alt="">
+                                    <h4>Açaí Especial</h4>
+                                    <p>Morango, banana, granola e leite condensado</p>
+                                </div>
+                                <strong>R$ 19,90</strong>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!--MODAL do História & Experiência-->
+            <div class="modal" id="modal-historia" aria-hidden="true">
+                <div class="modal-conteudo">
+                    <button class="modal-fechar" id="fechar-historia" aria-label="Fechar historia">
+                        x
+                    </button>
+
+                    <span>CONFS</span>
+                    <h2>História & Experiência</h2>
+                    <h4 class="modal-subtitulo">Mais do que café e sorvete, um lugar para criar boas memórias.</h4>
+
+                    <p>
+                        Nossa história nasceu da vontade de transformar pequenos momentos do dia em experiências especiais. Em um só lugar, reunimos o aroma de um café preparado com carinho, a cremosidade de um bom sorvete e aquele ambiente que convida você a ficar mais um pouco.
+                    </p>
+
+                    <p>
+                        Acreditamos que sabor também é uma forma de expressão. Por isso, cada detalhe foi pensado para unir simplicidade, qualidade e personalidade — desde a escolha dos ingredientes até a forma como recebemos cada pessoa.
+                    </p> 
+
+                    <p>
+                        Seja para começar o dia com um café, fazer uma pausa no meio da tarde, compartilhar uma sobremesa ou simplesmente aproveitar um momento tranquilo, queremos que você se sinta em casa.
+                    </p>
+
+                    <h4 class="modal-subtitulo">Uma experiência para todos os momentos.</h4>
+                    <p>Café quente, sorvete cremoso, boas conversas e memórias que ficam. Essa é a nossa maneira de fazer parte do seu dia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TERCEIRA PARTE: THANK YOU / CONTATO -->
+        <section class="historia" id="historia">
+            <div class="historia-texto">
+
+                <p class="etiqueta">PARA VOCÊ</p>
+                <h2>THANK <span>YOU</span></h2>
+                <p class="subtitulo">Por apoiar pequenos momentos.</p>
+
+                <div class="lista">
+                    <div class="item">
+                        <span class="item-numero">01</span>
+                        <div>
+                            <h3>Valorize cada momento</h3>
+                            <p>Uma pausa, um café e uma boa companhia podem mudar o dia.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-numero">02</span>
+                        <div>
+                            <h3>Feito com cuidado</h3>
+                            <p>Produtos e experiências criados para transmitir acolhimento.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-numero">03</span>
+                        <div>
+                            <h3>Vamos conversar</h3>
+                            <p>Entre em contato e descubra mais sobre a marca.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="historia-imagem">
+                <div class="imagem-placeholder">
+                    <img src="imagens/imagem-encerramento.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape" id="contato">
+        <div class="rodape-marca">
+            <a href="#inicio" class="logo">CONFS<span>.</span></a>
+            <p>Sorvete · Chá · Café</p>
+        </div>
+
+        <div class="rodape-links">
+            <a href="#inicio">Início</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#historia">Sobre</a>
+        </div>
+
+        <div class="rodape-contato">
+            <p>Entre em contato</p>
+            <a href="mailto:contato@confs.com">contato@confs.com</a>
+            <a href="mailto:contato@confs.com">Insta: @confs_sabor</a>
+            <a href="mailto:contato@confs.com">Wpp: (79) 91366-5011</a>
+        </div>
+
+        <div class="rodape-final">
+            <p>© <span id="ano"></span> CONFS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src=""></script>
+</body>
+</html>
